@@ -547,17 +547,24 @@ const HomepageTwo = () => {
           </Stack>
         </Stack>
       </Box>
-      <iframe
-        width="420"
-        height="315"
-        src="https://www.youtube.com/watch?v=ujpmfcQMxKA"
-        style={{
-          height: "50vh",
-          width: "100%",
-          marginBottom: "50px",
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
         }}
       >
-      </iframe>
+        <iframe
+          src="https://www.youtube.com/watch?v=ujpmfcQMxKA/?controls=1"
+          style={{
+            height: "50vh",
+            width: "80%",
+            marginBottom: "50px",
+          }}
+        >
+        </iframe>
+      </Box>
       <Box
         sx={{
           height: "100vh",
