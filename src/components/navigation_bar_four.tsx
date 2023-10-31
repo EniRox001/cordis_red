@@ -1,161 +1,313 @@
 import {
   AppBar,
   Box,
-  Button,
   Container,
-  Menu,
-  MenuItem,
+  IconButton,
   Stack,
   Toolbar,
   Typography,
 } from "@mui/material";
 
+import { useState } from "react";
+
 import Logo from "../assets/icons/logo_white.png";
 import PhoneOrange from "../assets/icons/phone_orange.png";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 
 export default function NavigationBarFour() {
-  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-  const open = Boolean(anchorEl);
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleClose = () => {
-    setAnchorEl(null);
+  const [open, setOpen] = useState(false);
+
+  const handleClick = () => {
+    setOpen(!open);
   };
 
   return (
-    <AppBar
-      position="static"
-      sx={{
-        backgroundColor: "transparent",
-        color: "white",
-      }}
-    >
-      <Container maxWidth="xl">
-        <Toolbar
-          disableGutters
-          sx={{
-            display: "flex",
-            justifyContent: {
-              xs: "space-between",
-              sm: "space-between",
-              md: "space-around",
-            },
-            flexDirection: "row",
-          }}
-        >
-          <Stack
-            direction={"row"}
-            gap={3}
+    <Stack>
+      <AppBar
+        position="static"
+        sx={{
+          backgroundColor: "transparent",
+        }}
+      >
+        <Container maxWidth="xl">
+          <Toolbar
+            disableGutters
             sx={{
-              alignItems: "center",
+              display: "flex",
+              justifyContent: {
+                xs: "space-between",
+                sm: "space-between",
+                md: "space-around",
+              },
+              flexDirection: "row",
             }}
           >
-            <Box
-              src={Logo}
-              component="img"
+            <Stack
+              direction={"row"}
+              gap={3}
               sx={{
-                height: { xs: "1.5rem", sm: "2rem", md: "2.5rem" },
-              }}
-            />
-            <Typography>
-              CORDIS
-            </Typography>
-          </Stack>
-          <Stack
-            direction={"row"}
-            gap={8}
-            sx={{
-              display: { xs: "none", sm: "none", md: "flex" },
-              textdecoration: "none",
-              color: "#ffffff",
-            }}
-          >
-            <Link to="/">
-              <Typography sx={{ color: "orange" }}>
-                Home
-              </Typography>
-            </Link>
-            <Link to="/homepage_two">
-              <Typography color={"white"}>
-                Services
-              </Typography>
-            </Link>
-            <Link to="/homepage_three">
-              <Typography sx={{ color: "white" }}>
-                Contacts
-              </Typography>
-            </Link>
-          </Stack>
-          <>
-            <Button
-              id="basic-button"
-              aria-controls={open ? "basic-menu" : undefined}
-              aria-haspopup="true"
-              aria-expanded={open ? "true" : undefined}
-              onClick={handleClick}
-              sx={{
-                display: { xs: "flex", sm: "flex", md: "none" },
+                alignItems: "center",
               }}
             >
-              <Typography
+              <Box
+                src={Logo}
+                component="img"
                 sx={{
-                  color: "#ffffff",
+                  height: { xs: "1.5rem", sm: "2rem", md: "2.5rem" },
+                }}
+              />
+              <Link
+                to="/"
+                style={{ textDecoration: "none" }}
+              >
+                <Typography
+                  sx={{
+                    color: "white",
+                    fontWeight: "bold",
+                    webkitTransition: "all 0.5s ease",
+                    mozTransition: "all 0.5s ease",
+                    msTransition: "all 0.5s ease",
+                    oTransition: "all 0.5s ease",
+                    transition: "all 0.5s ease",
+                    "&:hover": {
+                      color: "#ff8c00",
+                      animationDelay: "3s",
+                    },
+                  }}
+                >
+                  CORDIS
+                </Typography>
+              </Link>
+            </Stack>
+            <Stack
+              direction={"row"}
+              gap={8}
+              sx={{
+                display: { xs: "none", sm: "none", md: "flex" },
+                textdecoration: "none",
+                color: "#ffffff",
+              }}
+            >
+              <Link
+                to="/homepage_two"
+                style={{ textDecoration: "none" }}
+              >
+                <Typography
+                  sx={{
+                    color: "white",
+                    borderBottom: "2px solid transparent",
+                    fontWeight: "bold",
+                    webkitTransition: "all 0.5s ease",
+                    mozTransition: "all 0.5s ease",
+                    msTransition: "all 0.5s ease",
+                    oTransition: "all 0.5s ease",
+                    transition: "all 0.5s ease",
+                    "&:hover": {
+                      color: "white",
+                      borderBottom: "2px solid white",
+                      animationDelay: "3s",
+                    },
+                  }}
+                >
+                  Home
+                </Typography>
+              </Link>
+              <Link to="/homepage_three" style={{ textDecoration: "none" }}>
+                <Typography
+                  sx={{
+                    color: "white",
+                    borderBottom: "2px solid transparent",
+                    fontWeight: "bold",
+                    webkitTransition: "all 0.5s ease",
+                    mozTransition: "all 0.5s ease",
+                    msTransition: "all 0.5s ease",
+                    oTransition: "all 0.5s ease",
+                    transition: "all 0.5s ease",
+                    "&:hover": {
+                      color: "white",
+                      borderBottom: "2px solid white",
+                      animationDelay: "3s",
+                    },
+                  }}
+                >
+                  Services
+                </Typography>
+              </Link>
+              <Link to="/homepage_four" style={{ textDecoration: "none" }}>
+                <Typography
+                  sx={{
+                    color: "white",
+                    borderBottom: "2px solid transparent",
+                    fontWeight: "bold",
+                    webkitTransition: "all 0.5s ease",
+                    mozTransition: "all 0.5s ease",
+                    msTransition: "all 0.5s ease",
+                    oTransition: "all 0.5s ease",
+                    transition: "all 0.5s ease",
+                    "&:hover": {
+                      color: "white",
+                      borderBottom: "2px solid white",
+                      animationDelay: "3s",
+                    },
+                  }}
+                >
+                  Contacts
+                </Typography>
+              </Link>
+            </Stack>
+            <>
+              <IconButton
+                onClick={handleClick}
+                sx={{
+                  display: { xs: "flex", sm: "flex", md: "none" },
                 }}
               >
-                Menu
-              </Typography>
-            </Button>
-            <Menu
-              id="basic-menu"
-              anchorEl={anchorEl}
-              open={open}
-              onClose={handleClose}
-              MenuListProps={{
-                "aria-labelledby": "basic-button",
+                {open
+                  ? (
+                    <CloseIcon
+                      sx={{
+                        color: "white",
+                        backgroundColor: " #ff8c00",
+                        padding: "0.5rem",
+                      }}
+                    />
+                  )
+                  : (
+                    <MenuIcon
+                      sx={{
+                        color: "white",
+                        backgroundColor: " #ff8c00",
+                        padding: "0.5rem",
+                      }}
+                    />
+                  )}
+                {" "}
+              </IconButton>
+            </>
+            <Stack
+              direction="row"
+              gap={2}
+              sx={{
+                display: { xs: "none", sm: "none", md: "flex" },
+                alignItems: "center",
               }}
             >
-              <MenuItem onClick={handleClose}>
-                <Link to="/">
-                  <Typography sx={{ color: "orange" }}>
-                    Home
-                  </Typography>
-                </Link>
-              </MenuItem>
-              <MenuItem onClick={handleClose}>
-                <Link to="/homepage_two">
-                  <Typography color={"black"}>
-                    Services
-                  </Typography>
-                </Link>
-              </MenuItem>
-              <MenuItem onClick={handleClose}>
-                <Link to="/homepage_three">
-                  <Typography color={"black"}>
-                    Contacts
-                  </Typography>
-                </Link>
-              </MenuItem>
-            </Menu>
-          </>
+              <Box src={PhoneOrange} component="img" />
+              <Typography sx={{ color: "white" }}>
+                +421 940 355 485
+              </Typography>
+            </Stack>
+          </Toolbar>
+        </Container>
+      </AppBar>
+      <Box
+        sx={{
+          height: { xs: open ? "32vh" : 0, sm: open ? "100vh" : 0, md: "0" },
+          backgroundColor: "#ffffff",
+          display: {
+            xs: open ? "flex" : "none",
+            sm: open ? "flex" : "none",
+            md: "none",
+          },
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Stack>
+          <Link to="/homepage_two" style={{ textDecoration: "none" }}>
+            <Typography
+              sx={{
+                color: "black",
+                textAlign: "center",
+                fontWeight: "bold",
+                webkitTransition: "all 0.5s ease",
+                mozTransition: "all 0.5s ease",
+                msTransition: "all 0.5s ease",
+                oTransition: "all 0.5s ease",
+                transition: "all 0.5s ease",
+                "&:hover": {
+                  color: "#ff8c00",
+                  animationDelay: "3s",
+                },
+              }}
+            >
+              Home
+            </Typography>
+          </Link>
+          <Link to="/homepage_three" style={{ textDecoration: "none" }}>
+            <Typography
+              sx={{
+                color: "black",
+                alignItems: "center",
+                textAlign: "center",
+                alignSelf: "center",
+                pt: 3,
+                fontWeight: "bold",
+                webkitTransition: "all 0.5s ease",
+                mozTransition: "all 0.5s ease",
+                msTransition: "all 0.5s ease",
+                oTransition: "all 0.5s ease",
+                transition: "all 0.5s ease",
+                "&:hover": {
+                  color: "#ff8c00",
+                  animationDelay: "3s",
+                },
+              }}
+            >
+              Services
+            </Typography>
+          </Link>
 
-          <Stack
-            direction="row"
-            gap={2}
-            sx={{
-              display: { xs: "none", sm: "none", md: "flex" },
-              alignItems: "center",
-            }}
-          >
-            <Box src={PhoneOrange} component="img" />
-            <Typography sx={{ color: "orange" }}>
+          <Link to="/homepage_four" style={{ textDecoration: "none" }}>
+            <Typography
+              sx={{
+                color: "black",
+                textAlign: "center",
+                alignItems: "center",
+                alignSelf: "center",
+                pt: 3,
+                fontWeight: "bold",
+                webkitTransition: "all 0.5s ease",
+                mozTransition: "all 0.5s ease",
+                msTransition: "all 0.5s ease",
+                oTransition: "all 0.5s ease",
+                transition: "all 0.5s ease",
+                "&:hover": {
+                  color: "#ff8c00",
+                  animationDelay: "3s",
+                },
+              }}
+            >
+              Contacts
+            </Typography>
+          </Link>
+          <Link to="/homepage_four" style={{ textDecoration: "none" }}>
+            <Typography
+              sx={{
+                color: "black",
+                textAlign: "center",
+                alignItems: "center",
+                alignSelf: "center",
+                pt: 3,
+                fontWeight: "bold",
+                webkitTransition: "all 0.5s ease",
+                mozTransition: "all 0.5s ease",
+                msTransition: "all 0.5s ease",
+                oTransition: "all 0.5s ease",
+                transition: "all 0.5s ease",
+                "&:hover": {
+                  color: "#ff8c00",
+                  animationDelay: "3s",
+                },
+              }}
+            >
               +421 940 355 485
             </Typography>
-          </Stack>
-        </Toolbar>
-      </Container>
-    </AppBar>
+          </Link>
+        </Stack>
+      </Box>
+    </Stack>
   );
 }

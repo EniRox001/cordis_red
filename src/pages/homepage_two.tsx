@@ -368,6 +368,18 @@ const HomepageTwo = () => {
               sx={{
                 height: "335px",
                 width: { xs: "90%", sm: "280px", md: "280px" },
+                backgroundColor: "#000000",
+                webkitTransition: "all 0.5s ease",
+                mozTransition: "all 0.5s ease",
+                msTransition: "all 0.5s ease",
+                oTransition: "all 0.5s ease",
+                transition: "all 0.5s ease",
+                "&:hover": {
+                  filter: "brightness(0.5)",
+                  backgroundColor: "#000000",
+                  opacity: "2",
+                  animationDelay: "3s",
+                },
               }}
             />
             <Box
@@ -376,6 +388,18 @@ const HomepageTwo = () => {
               sx={{
                 height: "335px",
                 width: { xs: "90%", sm: "280px", md: "280px" },
+                backgroundColor: "#000000",
+                webkitTransition: "all 0.5s ease",
+                mozTransition: "all 0.5s ease",
+                msTransition: "all 0.5s ease",
+                oTransition: "all 0.5s ease",
+                transition: "all 0.5s ease",
+                "&:hover": {
+                  filter: "brightness(0.5)",
+                  backgroundColor: "#000000",
+                  opacity: "2",
+                  animationDelay: "3s",
+                },
               }}
             />
             <Box
@@ -384,6 +408,18 @@ const HomepageTwo = () => {
               sx={{
                 height: "335px",
                 width: { xs: "90%", sm: "280px", md: "280px" },
+                backgroundColor: "#000000",
+                webkitTransition: "all 0.5s ease",
+                mozTransition: "all 0.5s ease",
+                msTransition: "all 0.5s ease",
+                oTransition: "all 0.5s ease",
+                transition: "all 0.5s ease",
+                "&:hover": {
+                  filter: "brightness(0.5)",
+                  backgroundColor: "#000000",
+                  opacity: "2",
+                  animationDelay: "3s",
+                },
               }}
             />
           </Stack>
@@ -401,6 +437,18 @@ const HomepageTwo = () => {
               sx={{
                 height: "211px",
                 width: { xs: "90%", sm: "250px", md: "280px" },
+                backgroundColor: "#000000",
+                webkitTransition: "all 0.5s ease",
+                mozTransition: "all 0.5s ease",
+                msTransition: "all 0.5s ease",
+                oTransition: "all 0.5s ease",
+                transition: "all 0.5s ease",
+                "&:hover": {
+                  filter: "brightness(0.5)",
+                  backgroundColor: "#000000",
+                  opacity: "2",
+                  animationDelay: "3s",
+                },
               }}
             />
             <Box
@@ -409,6 +457,18 @@ const HomepageTwo = () => {
               sx={{
                 height: "211px",
                 width: { xs: "90%", sm: "250", md: "280px" },
+                backgroundColor: "#000000",
+                webkitTransition: "all 0.5s ease",
+                mozTransition: "all 0.5s ease",
+                msTransition: "all 0.5s ease",
+                oTransition: "all 0.5s ease",
+                transition: "all 0.5s ease",
+                "&:hover": {
+                  filter: "brightness(0.5)",
+                  backgroundColor: "#000000",
+                  opacity: "2",
+                  animationDelay: "3s",
+                },
               }}
             />
             <Box
@@ -417,6 +477,18 @@ const HomepageTwo = () => {
               sx={{
                 height: "211px",
                 width: { xs: "90%", sm: "250px", md: "280px" },
+                backgroundColor: "#000000",
+                webkitTransition: "all 0.5s ease",
+                mozTransition: "all 0.5s ease",
+                msTransition: "all 0.5s ease",
+                oTransition: "all 0.5s ease",
+                transition: "all 0.5s ease",
+                "&:hover": {
+                  filter: "brightness(0.5)",
+                  backgroundColor: "#000000",
+                  opacity: "2",
+                  animationDelay: "3s",
+                },
               }}
             />
           </Stack>

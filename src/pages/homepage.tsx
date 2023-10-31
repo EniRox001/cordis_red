@@ -254,6 +254,18 @@ const HomePage = () => {
                 backgroundSize: "cover",
                 component: "div",
                 height: "50vh",
+                backgroundColor: "#000000",
+                webkitTransition: "all 0.5s ease",
+                mozTransition: "all 0.5s ease",
+                msTransition: "all 0.5s ease",
+                oTransition: "all 0.5s ease",
+                transition: "all 0.5s ease",
+                "&:hover": {
+                  filter: "brightness(0.5)",
+                  backgroundColor: "#000000",
+                  opacity: "2",
+                  animationDelay: "3s",
+                },
               }}
             >
               <Stack
@@ -355,6 +367,18 @@ const HomePage = () => {
                 backgroundImage: `url(${OurServicesTwo})`,
                 component: "div",
                 height: "50vh",
+                backgroundColor: "#000000",
+                webkitTransition: "all 0.5s ease",
+                mozTransition: "all 0.5s ease",
+                msTransition: "all 0.5s ease",
+                oTransition: "all 0.5s ease",
+                transition: "all 0.5s ease",
+                "&:hover": {
+                  filter: "brightness(0.5)",
+                  backgroundColor: "#000000",
+                  opacity: "2",
+                  animationDelay: "3s",
+                },
               }}
             >
               <Stack
@@ -457,6 +481,18 @@ const HomePage = () => {
 
                 component: "div",
                 height: "50vh",
+                backgroundColor: "#000000",
+                webkitTransition: "all 0.5s ease",
+                mozTransition: "all 0.5s ease",
+                msTransition: "all 0.5s ease",
+                oTransition: "all 0.5s ease",
+                transition: "all 0.5s ease",
+                "&:hover": {
+                  filter: "brightness(0.5)",
+                  backgroundColor: "#000000",
+                  opacity: "2",
+                  animationDelay: "3s",
+                },
               }}
             >
               <Stack
@@ -567,29 +603,24 @@ const HomePage = () => {
             sx={{
               fontSize: { xs: "2rem", sm: "3rem", md: "3rem" },
               textAlign: "center",
-              pb: 4,
+              fontWeight: "bold",
+              pb: 10,
             }}
           >
             Our Partners
           </Typography>
-          <Grid
-            container
-            spacing={0}
+          <Stack
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              flexDirection: { xs: "column", sm: "column", md: "row" },
+              gap: { xs: 4, sm: 4, md: 20 },
+            }}
           >
-            <Grid
-              item
-              xs={12}
-              md={4}
-            >
-              <Box src={PartnerOne} component={"img"} />
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <Box src={PartnerTwo} component={"img"} />
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <Box src={PartnerThree} component={"img"} />
-            </Grid>
-          </Grid>
+            <Box src={PartnerOne} component={"img"} />
+            <Box src={PartnerTwo} component={"img"} />
+            <Box src={PartnerThree} component={"img"} />
+          </Stack>
         </Stack>
       </Box>
       <Box>
