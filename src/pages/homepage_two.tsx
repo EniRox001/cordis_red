@@ -756,7 +756,7 @@ const HomepageTwo = () => {
             }}
           >
             <form
-              action="https://formsubmit.co/enirox001@gmail.com"
+              action="https://formsubmit.co/robo.cordis@gmail.com"
               method="POST"
               style={{
                 gap: 30,
