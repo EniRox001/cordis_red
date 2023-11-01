@@ -93,7 +93,6 @@ const HomepageTwo = () => {
               }}
             >
               <Button
-                variant="contained"
                 sx={{
                   backgroundColor: "#ff8c00",
                   color: "#ffffff",
@@ -101,6 +100,12 @@ const HomepageTwo = () => {
                   textTransform: "none",
                   height: "3rem",
                   width: "14rem",
+                  "&:hover": {
+                    color: "#ff8c00",
+                    border: "1px solid #ff8c00",
+                    backgroundcolor: "#transparent",
+                    animationdelay: "3s",
+                  },
                 }}
               >
                 <Typography>
@@ -203,7 +208,7 @@ const HomepageTwo = () => {
             flexDirection: { xs: "column", sm: "column", md: "row" },
             pr: { xs: 3, sm: 3, md: 20 },
             pl: { xs: 3, sm: 3, md: 10 },
-            py: { xs: 3, sm: 3, md: 13 },
+            py: { xs: 8, sm: 8, md: 13 },
           }}
         >
           <Box
@@ -213,6 +218,7 @@ const HomepageTwo = () => {
               display: { xs: "block", md: "none" },
               height: { xs: "100%", md: "403px" },
               width: { xs: "100%", md: "403px" },
+              pb: { xs: 3, sm: 3, md: 0 },
             }}
           />
 
@@ -235,22 +241,30 @@ const HomepageTwo = () => {
             </Typography>
             <Stack spacing={3}>
               <Typography>
-                Extends the life of the roof: Dirt can damage the material from
-                which the roof is made, which can cause cracks, stains or other
-                damage. This can lead to water leakage and subsequent damage to
-                the entire roof. Regular cleaning can extend the life of your
-                roof and ensure that your investment in it pays off.
+                <span style={{ color: "#ff8c00" }}>
+                  Extends the life of the roof:
+                </span>{" "}
+                Dirt can damage the material from which the roof is made, which
+                can cause cracks, stains or other damage. This can lead to water
+                leakage and subsequent damage to the entire roof. Regular
+                cleaning can extend the life of your roof and ensure that your
+                investment in it pays off.
               </Typography>
               <Typography>
-                Improves the aesthetic appearance: Cleaning the roof can
-                significantly improve its aesthetic appearance. Regular cleaning
-                can remove dirt and return the roof to its original color
+                <span style={{ color: "#ff8c00" }}>
+                  Improves the aesthetic appearance:
+                </span>{" "}
+                Cleaning the roof can significantly improve its aesthetic
+                appearance. Regular cleaning can remove dirt and return the roof
+                to its original color
               </Typography>
               <Typography>
-                Improving Home Value: Roof cleaning can increase the value of
-                your home. When you're thinking of selling , an attractive and
-                well-maintained roof can attract more buyers and allow you to
-                command a higher price .
+                <span style={{ color: "#ff8c00" }}>
+                  Improving Home Value:
+                </span>{" "}
+                Roof cleaning can increase the value of your home. When you're
+                thinking of selling , an attractive and well-maintained roof can
+                attract more buyers and allow you to command a higher price .
               </Typography>
             </Stack>
           </Stack>
@@ -280,6 +294,7 @@ const HomepageTwo = () => {
             sx={{
               height: { xs: "100%", md: "380px" },
               width: { xs: "100%", md: "403px" },
+              pb: { xs: 3, sm: 3, md: 0 },
             }}
           />
 
@@ -298,7 +313,15 @@ const HomepageTwo = () => {
                 },
               }}
             >
-              How Roff Cleaning Proceeds
+              How{" "}
+              <span
+                style={{
+                  color: "#ff8c00",
+                }}
+              >
+                Roff Cleaning
+              </span>{" "}
+              Proceeds
             </Typography>
             <Stack spacing={3}>
               <Typography>
@@ -306,7 +329,11 @@ const HomepageTwo = () => {
                 date, or send us photos (roof layout, anchoring options, water
                 access
               </Typography>
-              <Typography>
+              <Typography
+                sx={{
+                  pb: { xs: 3, sm: 3, md: 0 },
+                }}
+              >
                 Based on this information, we will analyze your roof system and
                 prepare a price offer. We will then contact you and agree on a
                 date for implementation. On the agreed day of implementation, we
@@ -340,7 +367,7 @@ const HomepageTwo = () => {
           alignItems: "center",
           justifyContent: "center",
           textAlign: "center",
-          my: 16,
+          my: { xs: 3, sm: 3, md: 8 },
         }}
       >
         <Stack gap={3}>
@@ -495,7 +522,7 @@ const HomepageTwo = () => {
         </Stack>
       </Box>
       <Box height={"80vh"}>
-        <Stack>
+        <Stack gap={4}>
           <Typography
             sx={{
               fontSize: {
@@ -504,6 +531,7 @@ const HomepageTwo = () => {
               },
               color: "#ff8c00",
               textAlign: "center",
+              mt: { xs: 8, sm: 3, md: 13 },
             }}
           >
             TESTIMONIALS
@@ -553,6 +581,7 @@ const HomepageTwo = () => {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
+          mt: { xs: 16, sm: 3, md: 8 },
         }}
       >
         <iframe
@@ -567,8 +596,11 @@ const HomepageTwo = () => {
       </Box>
       <Box
         sx={{
-          height: "100vh",
+          height: "80vh",
           alignItems: "center",
+          justifyContent: "center",
+
+          mt: { xs: 10, sm: 3, md: 8 },
         }}
       >
         <Stack
@@ -699,7 +731,7 @@ const HomepageTwo = () => {
                 fontSize: { xs: "2rem", sm: "3rem", md: "3rem" },
               }}
             >
-              FOR ANY QUERIS CALL US ON
+              FOR ANY QUERIES CALL US ON
             </Typography>{" "}
             <Typography
               sx={{
@@ -723,12 +755,21 @@ const HomepageTwo = () => {
               textAlign: "start",
             }}
           >
-            <Stack gap={3}>
+            <form
+              action="https://formsubmit.co/enirox001@gmail.com"
+              method="POST"
+              style={{
+                gap: 30,
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
               <Stack gap={2}>
                 <Typography>
                   Name <span style={{ color: "#ff8c00" }}>*</span>
                 </Typography>
                 <TextField
+                  name="name"
                   multiline
                   rows={3}
                   sx={{
@@ -742,6 +783,7 @@ const HomepageTwo = () => {
                   Telephone
                 </Typography>
                 <TextField
+                  name="telephone"
                   multiline
                   rows={3}
                   sx={{
@@ -755,6 +797,7 @@ const HomepageTwo = () => {
                   Cleaning Location <span style={{ color: "#ff8c00" }}>*</span>
                 </Typography>
                 <TextField
+                  name="cleaning location"
                   multiline
                   rows={3}
                   sx={{
@@ -768,6 +811,7 @@ const HomepageTwo = () => {
                   Message <span style={{ color: "#ff8c00" }}>*</span>
                 </Typography>
                 <TextField
+                  name="message"
                   multiline
                   rows={3}
                   sx={{
@@ -785,13 +829,20 @@ const HomepageTwo = () => {
                   textTransform: "none",
                   height: "3rem",
                   width: "8rem",
+                  "&:hover": {
+                    color: "#ff8c00",
+                    border: "1px solid #ff8c00",
+                    backgroundColor: "transparent",
+                    animationDelay: "3s",
+                  },
                 }}
+                type="submit"
               >
                 <Typography>
                   send
                 </Typography>
               </Button>
-            </Stack>
+            </form>
           </Container>
         </Stack>
       </Box>
@@ -852,14 +903,16 @@ const HomepageTwo = () => {
                   width: "4rem",
                 }}
               />
-              <Box
-                src={InstagramIcon}
-                component={"img"}
-                sx={{
-                  height: "3rem",
-                  width: "4rem",
-                }}
-              />
+              <a href="https://instagram.com/cordis_vyskove_prace?igshid=MzMyNGUyNmU2YQ==">
+                <Box
+                  src={InstagramIcon}
+                  component={"img"}
+                  sx={{
+                    height: "3rem",
+                    width: "4rem",
+                  }}
+                />
+              </a>
               <Box
                 src={XIcon}
                 component={"img"}

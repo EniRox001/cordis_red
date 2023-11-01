@@ -114,7 +114,7 @@ export default function NavigationBarThree() {
                   Home
                 </Typography>
               </Link>
-              <Link to="/homepage_three" style={{ textDecoration: "none" }}>
+              <Link to="/homepage_four" style={{ textDecoration: "none" }}>
                 <Typography
                   sx={{
                     color: "white",
@@ -135,7 +135,7 @@ export default function NavigationBarThree() {
                   Services
                 </Typography>
               </Link>
-              <Link to="/homepage_four" style={{ textDecoration: "none" }}>
+              <Link to="/homepage_three" style={{ textDecoration: "none" }}>
                 <Typography
                   sx={{
                     color: "white",
@@ -195,7 +195,25 @@ export default function NavigationBarThree() {
               }}
             >
               <Box src={PhoneOrange} component="img" />
-              <Typography sx={{ color: "orange" }}>
+
+              <Typography
+                sx={{
+                  color: "orange",
+                  backgroundColor: "transparent",
+                  p: 1,
+                  borderRadius: "4px",
+                  webkitTransition: "all 0.5s ease",
+                  mozTransition: "all 0.5s ease",
+                  msTransition: "all 0.5s ease",
+                  oTransition: "all 0.5s ease",
+                  transition: "all 0.5s ease",
+                  "&:hover": {
+                    color: "black",
+                    backgroundColor: "#ffffff",
+                    animationDelay: "3s",
+                  },
+                }}
+              >
                 +421 940 355 485
               </Typography>
             </Stack>
@@ -236,7 +254,7 @@ export default function NavigationBarThree() {
               Home
             </Typography>
           </Link>
-          <Link to="/homepage_three" style={{ textDecoration: "none" }}>
+          <Link to="/homepage_four" style={{ textDecoration: "none" }}>
             <Typography
               sx={{
                 color: "black",
@@ -260,7 +278,7 @@ export default function NavigationBarThree() {
             </Typography>
           </Link>
 
-          <Link to="/homepage_four" style={{ textDecoration: "none" }}>
+          <Link to="/homepage_three" style={{ textDecoration: "none" }}>
             <Typography
               sx={{
                 color: "black",

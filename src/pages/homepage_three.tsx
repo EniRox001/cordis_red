@@ -49,7 +49,7 @@ const HomePageThree = () => {
               textAlign: "center",
               alignItems: "center",
             }}
-            gap={3}
+            gap={8}
           >
             <Typography
               sx={{
@@ -74,6 +74,16 @@ const HomePageThree = () => {
                 textTransform: "none",
                 height: "3rem",
                 width: "14rem",
+                webkitTransition: "all 0.5s ease",
+                mozTransition: "all 0.5s ease",
+                msTransition: "all 0.5s ease",
+                oTransition: "all 0.5s ease",
+                transition: "all 0.5s ease",
+                "&:hover": {
+                  color: "#ff8c00",
+                  backgroundColor: "#ffffff",
+                  animationDelay: "3s",
+                },
               }}
             >
               <Typography>
@@ -159,42 +169,58 @@ const HomePageThree = () => {
                 width: { md: "50%", lg: "50%" },
                 padding: "2rem",
               }}
-              gap={3}
             >
-              <Typography alignSelf={"center"} fontWeight={"bold"}>
-                Tell Us About Yourself
-              </Typography>
-              <Stack>
-                <Typography>Name</Typography>
-                <TextField multiline rows={3}></TextField>
-              </Stack>
-              <Stack>
-                <Typography>Telephone</Typography>
-                <TextField multiline rows={3}></TextField>
-              </Stack>
-              <Stack>
-                <Typography>Email</Typography>
-                <TextField multiline rows={3}></TextField>
-              </Stack>
-              <Stack>
-                <Typography>Message</Typography>
-                <TextField multiline rows={3}></TextField>
-              </Stack>
-              <Button
-                variant="contained"
-                sx={{
-                  backgroundColor: "#ff8c00",
-                  color: "#ffffff",
-                  borderRadius: "100px",
-                  textTransform: "none",
-                  height: "3rem",
-                  width: "8rem",
+              <form
+                action="https://formsubmit.co/enirox001@gmail.com"
+                style={{
+                  gap: 30,
+                  display: "flex",
+                  flexDirection: "column",
                 }}
+                method="POST"
               >
-                <Typography>
-                  send
+                <Typography alignSelf={"center"} fontWeight={"bold"}>
+                  Tell Us About Yourself
                 </Typography>
-              </Button>
+                <Stack>
+                  <Typography>Name</Typography>
+                  <TextField name="name" multiline rows={3}></TextField>
+                </Stack>
+                <Stack>
+                  <Typography>Telephone</Typography>
+                  <TextField name="telephone" multiline rows={3}></TextField>
+                </Stack>
+                <Stack>
+                  <Typography>Email</Typography>
+                  <TextField name="email" multiline rows={3}></TextField>
+                </Stack>
+                <Stack>
+                  <Typography>Message</Typography>
+                  <TextField name="message" multiline rows={3}></TextField>
+                </Stack>
+                <Button
+                  variant="contained"
+                  type="submit"
+                  sx={{
+                    backgroundColor: "#ff8c00",
+                    color: "#ffffff",
+                    borderRadius: "100px",
+                    textTransform: "none",
+                    height: "3rem",
+                    width: "8rem",
+                    "&:hover": {
+                      color: "#ff8c00",
+                      border: "1px solid #ff8c00",
+                      backgroundColor: "#ffffff",
+                      animationDelay: "3s",
+                    },
+                  }}
+                >
+                  <Typography>
+                    send
+                  </Typography>
+                </Button>
+              </form>
             </Stack>
           </Stack>
         </Box>
@@ -260,14 +286,16 @@ const HomePageThree = () => {
                     width: "4rem",
                   }}
                 />
-                <Box
-                  src={InstagramIcon}
-                  component={"img"}
-                  sx={{
-                    height: "3rem",
-                    width: "4rem",
-                  }}
-                />
+                <a href="https://instagram.com/cordis_vyskove_prace?igshid=MzMyNGUyNmU2YQ==">
+                  <Box
+                    src={InstagramIcon}
+                    component={"img"}
+                    sx={{
+                      height: "3rem",
+                      width: "4rem",
+                    }}
+                  />
+                </a>
                 <Box
                   src={XIcon}
                   component={"img"}

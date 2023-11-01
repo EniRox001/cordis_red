@@ -84,7 +84,6 @@ const HomePage = () => {
               cleaning activities,call Cordis Ltd
             </Typography>
             <Button
-              variant="contained"
               sx={{
                 backgroundColor: "#ff8c00",
                 color: "#ffffff",
@@ -92,6 +91,12 @@ const HomePage = () => {
                 textTransform: "none",
                 height: "3rem",
                 width: "14rem",
+                "&:hover": {
+                  color: "#ff8c00",
+                  border: "1px solid #ff8c00",
+                  backgroundcolor: "#ffffff",
+                  animationdelay: "3s",
+                },
               }}
             >
               <Typography>
@@ -110,7 +115,7 @@ const HomePage = () => {
           sx={{
             display: "flex",
             flexDirection: { xs: "column", sm: "column", md: "row" },
-            py: { xs: 4, sm: 4, md: 5 },
+            py: { xs: 8, sm: 8, md: 5 },
           }}
         >
           <Stack
@@ -173,12 +178,21 @@ const HomePage = () => {
               backgroundColor: "#ffffff",
             }}
           >
-            <Stack gap={3}>
+            <form
+              action="https://formsubmit.co/enirox001@gmail.com"
+              style={{
+                gap: 30,
+                display: "flex",
+                flexDirection: "column",
+              }}
+              method="POST"
+            >
               <Stack gap={2}>
                 <Typography>
                   Name <span style={{ color: "#ff8c00" }}>*</span>
                 </Typography>
                 <TextField
+                  name="name"
                   multiline
                   rows={3}
                 >
@@ -189,6 +203,7 @@ const HomePage = () => {
                   Telephone
                 </Typography>
                 <TextField
+                  name="telephone"
                   multiline
                   rows={3}
                 >
@@ -199,6 +214,7 @@ const HomePage = () => {
                   Cleaning Location <span style={{ color: "#ff8c00" }}>*</span>
                 </Typography>
                 <TextField
+                  name="cleaningLocation"
                   multiline
                   rows={3}
                 >
@@ -209,6 +225,7 @@ const HomePage = () => {
                   Message <span style={{ color: "#ff8c00" }}>*</span>
                 </Typography>
                 <TextField
+                  name="message"
                   multiline
                   rows={3}
                 >
@@ -223,13 +240,20 @@ const HomePage = () => {
                   textTransform: "none",
                   height: "3rem",
                   width: "8rem",
+                  "&:hover": {
+                    color: "#ff8c00",
+                    border: "1px solid #ff8c00",
+                    backgroundColor: "transparent",
+                    animationDelay: "3s",
+                  },
                 }}
+                type="submit"
               >
                 <Typography>
                   send
                 </Typography>
               </Button>
-            </Stack>
+            </form>
           </Container>
         </Stack>
       </Box>
@@ -240,6 +264,7 @@ const HomePage = () => {
               backgroundColor: "#f5f4f4",
               textAlign: "center",
               fontSize: { xs: "2rem", sm: "3rem", md: "3rem" },
+              pb: { xs: 4, sm: 4, md: 10 },
             }}
           >
             Our Services
@@ -665,6 +690,12 @@ const HomePage = () => {
                     textTransform: "none",
                     height: "3rem",
                     width: "8rem",
+                    "&:hover": {
+                      color: "#ff8c00",
+                      border: "1px solid #ff8c00",
+                      backgroundColor: "#ffffff",
+                      animationDelay: "3s",
+                    },
                   }}
                 >
                   <Typography>
@@ -680,6 +711,11 @@ const HomePage = () => {
                     textTransform: "none",
                     height: "3rem",
                     width: "8rem",
+                    "&:hover": {
+                      color: "#ffffff",
+                      backgroundColor: "#ff8c00",
+                      animationDelay: "3s",
+                    },
                   }}
                 >
                   <Typography>
@@ -755,14 +791,17 @@ const HomePage = () => {
                   width: "4rem",
                 }}
               />
-              <Box
-                src={InstagramIcon}
-                component={"img"}
-                sx={{
-                  height: "3rem",
-                  width: "4rem",
-                }}
-              />
+              <a href="https://instagram.com/cordis_vyskove_prace?igshid=MzMyNGUyNmU2YQ==">
+                <Box
+                  src={InstagramIcon}
+                  component={"img"}
+                  sx={{
+                    height: "3rem",
+                    width: "4rem",
+                  }}
+                />
+              </a>
+
               <Box
                 src={XIcon}
                 component={"img"}

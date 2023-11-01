@@ -48,8 +48,9 @@ const HomePageFour = () => {
           <Stack
             sx={{
               alignItems: "center",
+              textAlign: { xs: "center", sm: "center", md: "left" },
             }}
-            gap={3}
+            gap={6}
           >
             <Typography
               sx={{
@@ -76,6 +77,17 @@ const HomePageFour = () => {
                 textTransform: "none",
                 height: "3rem",
                 width: "14rem",
+                webkitTransition: "all 0.5s ease",
+                mozTransition: "all 0.5s ease",
+                msTransition: "all 0.5s ease",
+                oTransition: "all 0.5s ease",
+                transition: "all 0.5s ease",
+                "&:hover": {
+                  color: "#ffffff",
+                  border: "1px solid #ff8c00",
+                  backgroundColor: "transparent",
+                  animationDelay: "3s",
+                },
               }}
             >
               <Typography>
@@ -86,12 +98,12 @@ const HomePageFour = () => {
         </Container>
       </Box>
       <Box
-        paddingTop={5}
+        paddingTop={10}
         justifyContent={"center"}
         alignItems={"center"}
         paddingBottom={20}
       >
-        <Stack gap={5}>
+        <Stack gap={12}>
           <Typography
             sx={{
               textAlign: "center",
@@ -165,11 +177,12 @@ const HomePageFour = () => {
           <Typography
             sx={{
               textAlign: "center",
-              mt: 4,
+              mt: { xs: 0, sm: 0, md: 16 },
               fontSize: {
                 xs: "2rem",
                 sm: "3rem",
               },
+              px: 5,
             }}
           >
             How Does It Work For Us
@@ -193,7 +206,7 @@ const HomePageFour = () => {
                     alignSelf: "center",
                     height: "1px",
                     width: "100%",
-                    color: "#ff8c00",
+                    backgroundColor: "#ff8c00",
                   }}
                 />
               </Stack>
@@ -222,7 +235,7 @@ const HomePageFour = () => {
                     alignSelf: "center",
                     height: "1px",
                     width: "100%",
-                    color: "#ff8c00",
+                    backgroundColor: "#ff8c00",
                   }}
                 />
               </Stack>
@@ -251,7 +264,7 @@ const HomePageFour = () => {
                     alignSelf: "center",
                     height: "1px",
                     width: "100%",
-                    color: "#ff8c00",
+                    backgroundColor: "#ff8c00",
                   }}
                 />
               </Stack>
@@ -331,14 +344,16 @@ const HomePageFour = () => {
                   width: "4rem",
                 }}
               />
-              <Box
-                src={InstagramIcon}
-                component={"img"}
-                sx={{
-                  height: "3rem",
-                  width: "4rem",
-                }}
-              />
+              <a href="https://instagram.com/cordis_vyskove_prace?igshid=MzMyNGUyNmU2YQ==">
+                <Box
+                  src={InstagramIcon}
+                  component={"img"}
+                  sx={{
+                    height: "3rem",
+                    width: "4rem",
+                  }}
+                />
+              </a>
               <Box
                 src={XIcon}
                 component={"img"}
