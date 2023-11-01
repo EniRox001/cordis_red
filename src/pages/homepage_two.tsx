@@ -556,7 +556,7 @@ const HomepageTwo = () => {
         }}
       >
         <iframe
-          src="https://www.youtube.com/watch?v=ujpmfcQMxKA/?controls=1"
+          src="http://www.youtube.com/watch?v=ujpmfcQMxKA/?controls=1"
           style={{
             height: "50vh",
             width: "80%",
