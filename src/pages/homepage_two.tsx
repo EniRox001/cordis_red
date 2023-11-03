@@ -578,22 +578,25 @@ const HomepageTwo = () => {
       <Box
         sx={{
           display: "flex",
-          flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          mt: { xs: 16, sm: 3, md: 8 },
         }}
       >
-        <iframe
-          src="http://www.youtube.com/watch?v=ujpmfcQMxKA/?controls=1"
-          style={{
-            height: "50vh",
-            width: "80%",
-            marginBottom: "50px",
+        <Box
+          sx={{
+            mt: { xs: 16, sm: 3, md: 8 },
+            height: { xs: "40vh", sm: "80vh", md: "80vh" },
+            width: { xs: "90vw", sm: "80vw", md: "80vw" },
           }}
+          component={"iframe"}
+          allowFullScreen
+          src="https://www.youtube.com/embed/ujpmfcQMxKA?si=oYj5YPHb0wY6z6iI"
+          title="Cordis Video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         >
-        </iframe>
+        </Box>
       </Box>
+
       <Box
         sx={{
           height: "80vh",
